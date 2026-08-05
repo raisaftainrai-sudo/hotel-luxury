@@ -17,7 +17,7 @@ const treatments = [
 
   {
     title: "Luxury Facial Treatment",
-    image: "/images/facial-treatment.jpg",
+    image: "/facialimg.jpg",
     duration: "45 Minutes",
     price: "$90",
     description:
@@ -26,7 +26,7 @@ const treatments = [
 
   {
     title: "Hot Stone Therapy",
-    image: "/images/hot-stone.jpg",
+    image: "/hotstoneimg.jpg",
     duration: "75 Minutes",
     price: "$150",
     description:

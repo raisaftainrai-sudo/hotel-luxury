@@ -12,8 +12,8 @@ export default function SpaHero() {
       {/* Background */}
 
       <Image
-        src=""
-        alt="Luxury Spa"
+        src="/imgspa.png"
+        alt=""
         fill
         priority
         className="object-cover"

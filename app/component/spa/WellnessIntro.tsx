@@ -28,22 +28,50 @@ export default function WellnessIntro() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
+
           {/* Left Image */}
 
           <div className="relative">
 
-            <div className="relative h-[650px] rounded-[30px] overflow-hidden shadow-2xl">
+            <div
+              className="
+              relative
+              h-[600px]
+              lg:h-[720px]
+              rounded-[30px]
+              overflow-hidden
+              shadow-2xl
+              "
+            >
 
               <Image
-                src="/images/spa-intro.jpg"
+                src="/imgspa.png"
                 alt="Luxury Spa"
                 fill
-                className="object-cover"
+                priority
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="
+                object-cover
+                object-center
+                "
               />
 
             </div>
 
-            <div className="absolute bottom-8 right-8 bg-white rounded-3xl shadow-xl p-6">
+
+            {/* Experience Card */}
+
+            <div
+              className="
+              absolute
+              bottom-8
+              right-8
+              bg-white
+              rounded-3xl
+              shadow-xl
+              p-6
+              "
+            >
 
               <h3 className="text-4xl font-bold text-orange-500">
                 15+
@@ -55,33 +83,64 @@ export default function WellnessIntro() {
 
             </div>
 
+
           </div>
+
+
 
           {/* Right Content */}
 
           <div>
 
-            <p className="uppercase tracking-[5px] text-orange-500 font-semibold">
+            <p className="
+            uppercase
+            tracking-[5px]
+            text-orange-500
+            font-semibold
+            ">
               Welcome To Our Spa
             </p>
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
+
+            <h2 className="
+            mt-5
+            text-4xl
+            md:text-5xl
+            font-serif
+            font-bold
+            text-gray-900
+            leading-tight
+            ">
+
               Reconnect Your Mind,
+
               <span className="text-orange-500">
                 {" "}Body & Soul
               </span>
+
             </h2>
 
-            <p className="mt-8 text-gray-600 leading-8">
+
+
+            <p className="
+            mt-8
+            text-gray-600
+            leading-8
+            ">
+
               Escape the stress of everyday life and enjoy a peaceful
               wellness journey. Our luxury spa combines modern therapies
               with traditional healing techniques to deliver a truly
               unforgettable experience.
+
             </p>
+
+
 
             <div className="mt-10 space-y-6">
 
-              {features.map((item, index) => {
+
+              {features.map((item,index)=>{
 
                 const Icon = item.icon;
 
@@ -89,10 +148,27 @@ export default function WellnessIntro() {
 
                   <div
                     key={index}
-                    className="flex gap-5 bg-[#faf7f2] p-6 rounded-2xl shadow-sm hover:shadow-lg transition"
+                    className="
+                    flex
+                    gap-5
+                    bg-[#faf7f2]
+                    p-6
+                    rounded-2xl
+                    shadow-sm
+                    hover:shadow-lg
+                    transition
+                    "
                   >
 
-                    <div className="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center">
+                    <div className="
+                    w-16
+                    h-16
+                    rounded-2xl
+                    bg-orange-100
+                    flex
+                    items-center
+                    justify-center
+                    ">
 
                       <Icon
                         size={30}
@@ -101,17 +177,29 @@ export default function WellnessIntro() {
 
                     </div>
 
+
                     <div>
 
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      ">
                         {item.title}
                       </h3>
 
-                      <p className="mt-2 text-gray-600 leading-7">
+
+                      <p className="
+                      mt-2
+                      text-gray-600
+                      leading-7
+                      ">
                         {item.desc}
                       </p>
 
+
                     </div>
+
 
                   </div>
 
@@ -119,7 +207,10 @@ export default function WellnessIntro() {
 
               })}
 
+
             </div>
+
+
 
             <button
               className="
@@ -136,7 +227,9 @@ export default function WellnessIntro() {
               Explore Treatments
             </button>
 
+
           </div>
+
 
         </div>
 

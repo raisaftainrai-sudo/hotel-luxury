@@ -4,298 +4,299 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
-
 const faqs = [
+  {
+    question: "How can I make a room reservation?",
+    answer:
+      "You can book your room through our website booking form or contact our reservation team directly.",
+  },
 
-{
-question:"How can I make a room reservation?",
-answer:"You can book your room through our website booking form or contact our reservation team directly."
-},
+  {
+    question: "What are the check-in and check-out timings?",
+    answer:
+      "Check-in starts from 2:00 PM and check-out is available until 12:00 PM.",
+  },
 
-{
-question:"What are the check-in and check-out timings?",
-answer:"Check-in starts from 2:00 PM and check-out is available until 12:00 PM."
-},
+  {
+    question: "Do you provide airport pickup service?",
+    answer:
+      "Yes, we provide comfortable airport transfer services for our guests.",
+  },
 
-{
-question:"Do you provide airport pickup service?",
-answer:"Yes, we provide comfortable airport transfer services for our guests."
-},
+  {
+    question: "Can I cancel my reservation?",
+    answer:
+      "Yes, cancellation policies depend on your selected room package.",
+  },
 
-{
-question:"Can I cancel my reservation?",
-answer:"Yes, cancellation policies depend on your selected room package."
-},
-
-{
-question:"Do you have restaurant and spa facilities?",
-answer:"Yes, our hotel offers luxury dining and premium spa services."
-}
-
+  {
+    question: "Do you have restaurant and spa facilities?",
+    answer:
+      "Yes, our hotel offers luxury dining and premium spa services.",
+  },
 ];
 
 
+export default function ContactFAQ() {
 
-export default function ContactFAQ(){
+  const [open, setOpen] = useState<number | null>(null);
 
 
-const [open,setOpen] = useState<number | null>(null);
+  return (
 
+    <section className="bg-black py-20">
 
-return (
+      <div className="max-w-4xl mx-auto px-6">
 
-<section className="
-bg-black
-py-24
-">
 
+        {/* Heading */}
 
-<div className="
-max-w-5xl
-mx-auto
-px-6
-">
+        <motion.div
 
+          initial={{
+            opacity:0,
+            y:40
+          }}
 
+          whileInView={{
+            opacity:1,
+            y:0
+          }}
 
-{/* Heading */}
+          transition={{
+            duration:.7
+          }}
 
-<motion.div
+          viewport={{
+            once:true
+          }}
 
-initial={{
-opacity:0,
-y:40
-}}
+          className="text-center mb-14"
 
-whileInView={{
-opacity:1,
-y:0
-}}
+        >
 
-transition={{
-duration:.7
-}}
+          <p className="
+          text-orange-500
+          tracking-[8px]
+          mb-4
+          ">
+            FAQ
+          </p>
 
-viewport={{
-once:true
-}}
 
-className="
-text-center
-mb-14
-"
+          <h2 className="
+          text-white
+          text-5xl
+          md:text-6xl
+          font-serif
+          font-bold
+          ">
+            Frequently Asked Questions
+          </h2>
 
->
 
+        </motion.div>
 
-<p className="
-text-orange-400
-uppercase
-tracking-[5px]
-font-semibold
-">
 
-FAQ
 
-</p>
+        {/* FAQ Cards */}
 
 
+        <div className="space-y-5">
 
-<h2 className="
-mt-5
-text-4xl
-md:text-6xl
-font-serif
-font-bold
-text-white
-">
 
-Frequently Asked Questions
+        {
+          faqs.map((item,index)=>(
 
-</h2>
 
+            <motion.div
 
+              key={index}
 
-</motion.div>
 
+              initial={{
+                opacity:0,
+                y:30
+              }}
 
 
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
 
 
+              transition={{
+                delay:index*0.1
+              }}
 
 
-{/* FAQ Items */}
+              viewport={{
+                once:true
+              }}
 
 
-<div className="
-space-y-5
-">
+              whileHover={{
+                scale:1.03,
+                y:-5
+              }}
 
 
-{
+              className="
+              group
+              rounded-3xl
+              border
+              border-orange-400/30
+              bg-white/5
+              backdrop-blur-xl
+              overflow-hidden
 
-faqs.map((item,index)=>(
+              hover:border-orange-500
+              hover:bg-orange-500/10
 
+              transition-all
+              duration-300
 
-<motion.div
+              hover:shadow-[0_0_25px_rgba(255,140,0,0.25)]
+              "
 
-key={index}
+            >
 
-initial={{
-opacity:0,
-y:30
-}}
 
-whileInView={{
-opacity:1,
-y:0
-}}
 
-transition={{
-delay:index*0.1
-}}
+              {/* Question Button */}
 
-viewport={{
-once:true
-}}
+              <button
 
-className="
-rounded-3xl
+                onClick={()=>setOpen(
+                  open === index ? null : index
+                )}
 
-border
+                className="
+                w-full
+                flex
+                items-center
+                justify-between
+                p-6
+                text-left
+                "
 
-border-orange-400/30
+              >
 
-bg-white/5
 
-backdrop-blur-xl
+                <h3 className="
+                text-white
+                font-semibold
+                text-lg
 
-overflow-hidden
+                group-hover:text-orange-400
 
-"
+                transition
+                duration-300
+                ">
 
->
+                  {item.question}
 
+                </h3>
 
-<button
 
-onClick={()=>setOpen(
-open === index ? null : index
-)}
 
-className="
-w-full
-flex
-items-center
-justify-between
+                <motion.div
 
-p-6
+                  animate={{
+                    rotate: open === index ? 180 : 0
+                  }}
 
-text-left
+                  transition={{
+                    duration:.3
+                  }}
 
-"
+                  className="
+                  text-orange-500
+                  "
 
->
+                >
 
+                {
+                  open === index
+                  ?
+                  <Minus size={25}/>
+                  :
+                  <Plus size={25}/>
+                }
 
-<h3 className="
-text-white
-text-lg
-md:text-xl
-font-semibold
-">
 
-{item.question}
+                </motion.div>
 
-</h3>
 
 
+              </button>
 
-<div className="
-text-orange-400
-">
 
-{
 
-open === index
+              {/* Answer */}
 
-?
+              {
+                open === index && (
 
-<Minus size={24}/>
 
-:
+                  <motion.div
 
-<Plus size={24}/>
+                    initial={{
+                      height:0,
+                      opacity:0
+                    }}
 
-}
+                    animate={{
+                      height:"auto",
+                      opacity:1
+                    }}
 
+                    exit={{
+                      height:0,
+                      opacity:0
+                    }}
 
-</div>
+                    transition={{
+                      duration:.4
+                    }}
 
 
-</button>
+                    className="
+                    px-6
+                    pb-6
+                    text-gray-400
+                    leading-7
+                    "
 
+                  >
 
+                    {item.answer}
 
 
+                  </motion.div>
 
 
+                )
+              }
 
-{
 
-open === index && (
 
-<motion.div
+            </motion.div>
 
-initial={{
-height:0,
-opacity:0
-}}
 
-animate={{
-height:"auto",
-opacity:1
-}}
+          ))
+        }
 
-transition={{
-duration:.3
-}}
 
-className="
-px-6
-pb-6
-text-gray-400
-leading-7
-"
+        </div>
 
->
 
-{item.answer}
 
-</motion.div>
+      </div>
 
-)
 
-}
+    </section>
 
-
-</motion.div>
-
-
-))
-
-}
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-);
-
+  );
 }

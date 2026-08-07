@@ -1,253 +1,160 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Navigation } from "lucide-react";
+import Link from "next/link";
+
+import {
+  MapPin,
+  Navigation,
+  ArrowRight,
+} from "lucide-react";
 
 
-export default function MapSection(){
-
+export default function LocationSection() {
 
 return (
 
 <section className="
 bg-black
 py-24
+px-6
+overflow-hidden
 ">
 
 
 <div className="
 max-w-7xl
 mx-auto
-px-6
+grid
+lg:grid-cols-2
+gap-12
+items-center
 ">
 
 
+{/* MAP */}
 
+<motion.div
+
+initial={{
+opacity:0,
+x:-80
+}}
+
+whileInView={{
+opacity:1,
+x:0
+}}
+
+transition={{
+duration:0.8
+}}
+
+className="
+relative
+h-[450px]
+rounded-[35px]
+overflow-hidden
+border
+border-orange-500/40
+shadow-[0_0_40px_rgba(255,115,0,0.25)]
+"
+
+>
+
+
+<iframe
+
+src="https://www.google.com/maps?q=New+York&output=embed"
+
+width="100%"
+
+height="100%"
+
+loading="lazy"
+
+className="
+grayscale
+contrast-125
+"
+
+/>
+
+
+</motion.div>
+
+
+
+
+
+{/* CONTENT */}
 
 
 <motion.div
 
 initial={{
 opacity:0,
-y:40
+x:80
 }}
 
 whileInView={{
 opacity:1,
-y:0
+x:0
 }}
 
 transition={{
-duration:.7
+duration:0.8
 }}
-
-viewport={{
-once:true
-}}
-
-className="
-grid
-grid-cols-1
-lg:grid-cols-2
-gap-10
-items-center
-"
 
 >
 
 
 
-
-
-{/* Map Box */}
-
-<div className="
-
-relative
-
-h-[450px]
-
-rounded-[40px]
-
-overflow-hidden
-
-
-border
-
-border-orange-400/30
-
-
-bg-white/5
-
-
-shadow-[0_0_40px_rgba(255,165,0,0.15)]
-
-"
-
->
-
-
-<div className="
-absolute
-inset-0
-
-bg-gradient-to-br
-
-from-orange-500/20
-
-via-black
-
-to-black
-
-"/>
-
-
-
-
-
-<div className="
-relative
-z-10
-
-h-full
-
-flex
-
-items-center
-
-justify-center
-
-flex-col
-
-text-center
-
-">
-
-
-<div className="
-w-20
-h-20
-
-rounded-full
-
-bg-orange-500/20
-
-flex
-
-items-center
-
-justify-center
-
-text-orange-400
-
-">
-
-<MapPin size={40}/>
-
-</div>
-
-
-
-
-<h3 className="
-text-white
-text-3xl
-font-serif
-font-bold
-mt-6
-">
-
-Luxury Hotel Location
-
-</h3>
-
-
 <p className="
-text-gray-400
-mt-3
+text-orange-500
+tracking-[8px]
+text-sm
+mb-5
 ">
 
-123 Luxury Avenue,
-New York City
+FIND US
 
 </p>
 
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-{/* Information */}
-
-
-<div>
-
-
-<p className="
-text-orange-400
-
-uppercase
-
-tracking-[5px]
-
-font-semibold
-
-">
-
-Find Us
-
-</p>
 
 
 
 
 <h2 className="
-mt-5
-
-text-4xl
-
-md:text-6xl
-
-font-serif
-
-font-bold
-
 text-white
-
+text-5xl
+md:text-6xl
+font-serif
+font-bold
 leading-tight
-
+mb-8
 ">
 
-Visit Our
-Luxury Destination
+Visit Our Luxury
+<br/>
+Destination
 
 </h2>
 
 
 
 
+
 <p className="
-mt-6
-
 text-gray-400
-
+text-lg
 leading-8
-
+mb-10
 ">
 
-Experience world-class hospitality
-at our premium hotel location.
-Our team is available to guide
-you anytime.
+Experience world-class hospitality at our premium
+hotel location. Our team is available to guide you
+anytime.
 
 </p>
 
@@ -257,48 +164,82 @@ you anytime.
 
 
 
-
-<div className="
-mt-8
-
-space-y-5
-
-">
+{/* ADDRESS CARD */}
 
 
-<div className="
+<motion.div
+
+whileHover={{
+y:-8,
+scale:1.03
+}}
+
+transition={{
+duration:0.3
+}}
+
+className="
+group
 flex
+gap-5
 items-center
-gap-4
-
-bg-white/5
-
+bg-[#111]
 border
-
 border-white/10
-
+hover:border-orange-500/50
 rounded-2xl
+p-7
+mb-5
+transition-all
+duration-300
+hover:shadow-[0_0_35px_rgba(255,115,0,0.25)]
+"
 
-p-5
+>
 
+
+
+<div className="
+bg-orange-500/10
+p-3
+rounded-full
+group-hover:bg-orange-500/20
+transition
 ">
 
 
 <MapPin
-className="text-orange-400"
+
+size={30}
+
+className="
+text-orange-500
+group-hover:scale-110
+transition
+"
+
 />
+
+
+</div>
+
+
+
 
 
 <div>
 
-<h4 className="
+
+<h3 className="
 text-white
+text-xl
 font-semibold
 ">
 
 Address
 
-</h4>
+</h3>
+
 
 
 <p className="
@@ -314,47 +255,96 @@ New York
 </div>
 
 
+
+</motion.div>
+
+
+
+
+
+
+
+
+
+{/* DIRECTION CARD */}
+
+
+
+<motion.div
+
+whileHover={{
+y:-8,
+scale:1.03
+}}
+
+transition={{
+duration:0.3
+}}
+
+className="
+group
+flex
+gap-5
+items-center
+bg-[#111]
+border
+border-white/10
+hover:border-orange-500/50
+rounded-2xl
+p-7
+mb-8
+transition-all
+duration-300
+hover:shadow-[0_0_35px_rgba(255,115,0,0.25)]
+"
+
+>
+
+
+
+<div className="
+bg-orange-500/10
+p-3
+rounded-full
+group-hover:bg-orange-500/20
+transition
+">
+
+
+<Navigation
+
+size={30}
+
+className="
+text-orange-500
+group-hover:rotate-12
+group-hover:scale-110
+transition
+"
+
+/>
+
+
 </div>
 
 
 
 
 
-
-
-<div className="
-flex
-items-center
-gap-4
-
-bg-white/5
-
-border
-
-border-white/10
-
-rounded-2xl
-
-p-5
-
-">
-
-
-<Navigation
-className="text-orange-400"
-/>
-
-
 <div>
 
-<h4 className="
+
+<h3 className="
 text-white
+text-xl
 font-semibold
 ">
 
 Directions
 
-</h4>
+</h3>
+
+
 
 
 <p className="
@@ -366,49 +356,8 @@ Easy access from city center
 </p>
 
 
-</div>
-
 
 </div>
-
-
-</div>
-
-
-
-
-
-<button className="
-mt-8
-
-px-8
-
-py-4
-
-rounded-full
-
-bg-orange-500
-
-hover:bg-orange-600
-
-text-white
-
-font-semibold
-
-transition
-
-">
-
-
-Get Direction
-
-</button>
-
-
-
-
-</div>
-
 
 
 
@@ -417,10 +366,68 @@ Get Direction
 
 
 
+
+
+
+
+{/* BUTTON */}
+
+
+
+<Link
+
+href="/direction"
+
+className="
+group
+flex
+items-center
+gap-3
+bg-orange-500
+hover:bg-orange-600
+text-white
+px-8
+py-4
+rounded-full
+font-semibold
+transition
+hover:shadow-[0_0_30px_rgba(255,115,0,0.5)]
+"
+
+>
+
+
+Get Direction
+
+
+<ArrowRight
+
+size={20}
+
+className="
+group-hover:translate-x-2
+transition
+"
+
+/>
+
+
+</Link>
+
+
+
+
+
+
+</motion.div>
+
+
+
 </div>
 
 
 </section>
+
 
 );
 

@@ -7,34 +7,34 @@ import { motion } from "framer-motion";
 const images = [
 
 {
-image:"/images/luxury-gallery-1.jpg",
+image:"/lobbyimg.png",
 title:"Luxury Lobby",
 size:"md:row-span-2"
 },
 
 {
-image:"/images/luxury-gallery-2.jpg",
+image:"/royalimg.png",
 title:"Royal Suite"
 },
 
 {
-image:"/images/luxury-gallery-3.jpg",
+image:"/SIMINGIGM.png",
 title:"Swimming Pool"
 },
 
 {
-image:"/images/luxury-gallery-4.jpg",
+image:"/FINEDINIGIMG.png",
 title:"Fine Dining"
 },
 
 {
-image:"/images/luxury-gallery-5.jpg",
+image:"/breedomimg.png",
 title:"Premium Bedroom",
 size:"md:col-span-2"
 },
 
 {
-image:"/images/luxury-gallery-6.jpg",
+image:"/view12img.jpg",
 title:"Hotel View"
 }
 

@@ -14,7 +14,7 @@ import {
 const menu = [
   {
     title: "Premium Coffee",
-    image: "/imgcoffe.png",
+    image: "/cofee12img.jpg",
     price: "$12",
     icon: Coffee,
     description:
@@ -136,7 +136,7 @@ once:true
 
 <Image
 
-src="/imgcafe.png"
+src="/imgcoffe.png"
 
 alt="Luxury Café"
 

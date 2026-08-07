@@ -10,14 +10,26 @@ export default function Hero() {
 
 
       {/* Background Image Only */}
+  
       <Image
         src="/imgluxora.png"
         alt="Luxury Hotel"
         fill
         priority
-        className="object-cover"
+        className="object-cove"
+       
       />
 
+  {/* Overlay */}
+  {/* Light Overlay */}
+<div
+  className="
+    absolute
+    inset-0
+    bg-black/40
+    z-0
+  "
+/>
 
 
       {/* Content */}

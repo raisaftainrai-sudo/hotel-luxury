@@ -8,7 +8,7 @@ const treatments = [
 
   {
     title: "Aromatherapy Massage",
-    image: "/images/aromatherapy.jpg",
+    image: "/images (88).jpg",
     duration: "60 Minutes",
     price: "$120",
     description:

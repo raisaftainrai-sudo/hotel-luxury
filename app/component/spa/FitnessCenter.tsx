@@ -14,7 +14,7 @@ const fitness = [
 
   {
     title: "Luxury Fitness Center",
-    image: "/images/fitness-center.jpg",
+    image: "/fitimg.jpg",
     icon: Dumbbell,
     desc:
       "Modern equipment and personal trainers to maintain your healthy lifestyle.",
@@ -23,7 +23,7 @@ const fitness = [
 
   {
     title: "Yoga & Meditation",
-    image: "/images/yoga.jpg",
+    image: "/yougaimg.jpg",
     icon: Flower2,
     desc:
       "Find balance with peaceful yoga sessions and guided meditation.",
@@ -32,7 +32,7 @@ const fitness = [
 
   {
     title: "Wellness Programs",
-    image: "/images/wellness-program.jpg",
+    image: "/fitnessimg.jpg",
     icon: HeartPulse,
     desc:
       "Personalized wellness plans designed for complete body transformation.",

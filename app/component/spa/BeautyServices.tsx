@@ -14,7 +14,7 @@ const services = [
 
   {
     title: "Luxury Facial",
-    image: "/images/luxury-facial.jpg",
+    image: "/faical1.jpg",
     icon: Sparkles,
     description:
       "Advanced skincare treatment to refresh, hydrate and brighten your skin.",
@@ -23,7 +23,7 @@ const services = [
 
   {
     title: "Hair Styling",
-    image: "/images/hair-styling.jpg",
+    image: "/hairimg.jpg",
     icon: Scissors,
     description:
       "Professional hair styling with modern techniques and premium products.",
@@ -32,7 +32,7 @@ const services = [
 
   {
     title: "Body Care",
-    image: "/images/body-care.jpg",
+    image: "/body1img.jpg",
     icon: Heart,
     description:
       "Complete body care treatments designed for smooth and healthy skin.",
@@ -41,7 +41,7 @@ const services = [
 
   {
     title: "Bridal Beauty",
-    image: "/images/bridal-beauty.jpg",
+    image: "/bridalimg.jpg",
     icon: Gem,
     description:
       "Exclusive bridal packages created for your special luxury moments.",

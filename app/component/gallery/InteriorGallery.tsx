@@ -7,37 +7,37 @@ import { motion } from "framer-motion";
 const interiors = [
 
 {
-image:"/images/interior-1.jpg",
+image:"/iuxuryimg.png",
 title:"Luxury Lobby",
 desc:"Elegant lobby design with premium furniture and modern architecture."
 },
 
 {
-image:"/images/interior-2.jpg",
+image:"/yalimg.png",
 title:"Royal Bedroom",
 desc:"Beautiful bedroom interiors created for maximum comfort."
 },
 
 {
-image:"/images/interior-3.jpg",
+image:"/fineeeimg.png",
 title:"Fine Dining Area",
 desc:"A stylish restaurant space with luxury atmosphere."
 },
 
 {
-image:"/images/interior-4.jpg",
+image:"/modern1img.png",
 title:"Modern Lounge",
 desc:"Relaxing lounge area with sophisticated interior design."
 },
 
 {
-image:"/images/interior-5.jpg",
+image:"/bathroomimg.png",
 title:"Luxury Bathroom",
 desc:"Premium bathroom design with modern facilities."
 },
 
 {
-image:"/images/interior-6.jpg",
+image:"/pectionimg.png",
 title:"Hotel Reception",
 desc:"Grand reception area welcoming every guest."
 }

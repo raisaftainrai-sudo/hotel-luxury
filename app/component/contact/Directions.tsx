@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+
 import {
   MapPin,
   Car,
@@ -11,45 +13,53 @@ import {
 
 const directions = [
 
-{
-icon:Plane,
-title:"From Airport",
-text:"20 minutes drive from the international airport."
-},
+  {
+    icon: Plane,
+    title: "From Airport",
+    text: "20 minutes drive from the international airport."
+  },
 
-{
-icon:Car,
-title:"By Car",
-text:"Easy access with private parking facility."
-},
+  {
+    icon: Car,
+    title: "By Car",
+    text: "Easy access with private parking facility."
+  },
 
-{
-icon:Train,
-title:"Public Transport",
-text:"Nearest station is only 10 minutes away."
-}
+  {
+    icon: Train,
+    title: "Public Transport",
+    text: "Nearest station is only 10 minutes away."
+  }
 
 ];
 
 
+
 export default function Direction(){
+
+
+const [showMap,setShowMap] = useState(false);
+
 
 
 return (
 
 <section className="
 bg-black
-py-24
-">
-
-
-<div className="
-max-w-7xl
-mx-auto
+text-white
+py-20
 px-6
 ">
 
 
+<div className="
+max-w-6xl
+mx-auto
+">
+
+
+
+{/* Heading */}
 
 <motion.div
 
@@ -79,38 +89,33 @@ mb-14
 >
 
 
-<p className="
+<h2 className="
 text-orange-400
 uppercase
-tracking-[6px]
-font-semibold
+tracking-widest
+mb-3
 ">
 
 Direction
 
-</p>
+</h2>
 
 
-
-<h2 className="
-mt-5
+<h1 className="
 text-4xl
-md:text-6xl
-text-white
-font-serif
+md:text-5xl
 font-bold
+mb-5
 ">
 
 How To Reach Us
 
-</h2>
-
+</h1>
 
 
 <p className="
-mt-5
 text-gray-400
-max-w-2xl
+max-w-xl
 mx-auto
 ">
 
@@ -126,42 +131,77 @@ Find the easiest way to reach our luxury hotel.
 
 
 
-
-<div className="
-grid
-grid-cols-1
-lg:grid-cols-2
-gap-10
-items-center
-">
+{/* Location Map Box */}
 
 
+<motion.div
+
+initial={{
+opacity:0,
+scale:.9
+}}
+
+whileInView={{
+opacity:1,
+scale:1
+}}
+
+transition={{
+duration:.7
+}}
+
+viewport={{
+once:true
+}}
 
 
-
-{/* Map */}
-
-<div className="
-h-[420px]
-
+className="
+h-[400px]
 rounded-[40px]
-
 border
-
 border-orange-400/30
-
 bg-white/5
-
-flex
-
-items-center
-
-justify-center
-
 backdrop-blur-xl
+overflow-hidden
+flex
+items-center
+justify-center
+mb-12
+"
 
-">
+>
 
+
+{
+
+showMap ? (
+
+<iframe
+
+src="
+https://www.google.com/maps?q=New%20York&output=embed
+"
+
+width="100%"
+
+height="100%"
+
+style={{
+border:0
+}}
+
+loading="lazy"
+
+allowFullScreen
+
+></iframe>
+
+
+)
+
+:
+
+(
 
 <div className="
 text-center
@@ -169,42 +209,34 @@ text-center
 
 
 <div className="
-w-20
-h-20
-
+w-24
+h-24
 rounded-full
-
 bg-orange-500/20
-
 flex
-
 items-center
-
 justify-center
-
 mx-auto
-
+mb-5
 text-orange-400
-
 ">
 
+
 <MapPin size={45}/>
+
 
 </div>
 
 
 
-<h3 className="
-text-white
+<h2 className="
 text-3xl
-font-serif
 font-bold
-mt-6
 ">
 
 Luxora Hotel
 
-</h3>
+</h2>
 
 
 <p className="
@@ -213,22 +245,31 @@ mt-3
 ">
 
 123 Luxury Avenue,
+<br/>
 New York
 
 </p>
 
 
-<button className="
+
+
+<button
+
+onClick={()=>setShowMap(true)}
+
+className="
 mt-6
+bg-orange-500
+hover:bg-orange-600
 px-8
 py-3
 rounded-full
-bg-orange-500
-hover:bg-orange-600
-text-white
 font-semibold
 transition
-">
+duration-300
+"
+
+>
 
 Open Google Maps
 
@@ -237,10 +278,13 @@ Open Google Maps
 
 </div>
 
+)
 
-</div>
+
+}
 
 
+</motion.div>
 
 
 
@@ -252,7 +296,9 @@ Open Google Maps
 
 
 <div className="
-space-y-6
+grid
+md:grid-cols-3
+gap-6
 ">
 
 
@@ -266,50 +312,48 @@ const Icon=item.icon;
 
 return(
 
+
 <motion.div
 
 key={index}
+
 
 initial={{
 opacity:0,
 x:50
 }}
 
+
 whileInView={{
 opacity:1,
 x:0
 }}
 
+
 transition={{
+duration:.5,
 delay:index*0.15
 }}
+
 
 viewport={{
 once:true
 }}
 
+
 whileHover={{
-x:10
+y:-10
 }}
 
+
 className="
-flex
-gap-5
-
 bg-white/5
-
 border
-
 border-orange-400/30
-
 rounded-3xl
-
 p-6
-
-hover:border-orange-400
-
 transition
-
+hover:border-orange-400
 "
 
 
@@ -319,36 +363,25 @@ transition
 <div className="
 w-14
 h-14
-
 rounded-full
-
 bg-orange-500/20
-
 flex
-
 items-center
-
 justify-center
-
 text-orange-400
-
+mb-5
 ">
 
-
-<Icon size={26}/>
-
+<Icon size={28}/>
 
 </div>
 
 
 
-
-<div>
-
 <h3 className="
-text-white
 text-xl
-font-semibold
+font-bold
+mb-2
 ">
 
 {item.title}
@@ -358,16 +391,11 @@ font-semibold
 
 <p className="
 text-gray-400
-mt-2
 ">
 
 {item.text}
 
 </p>
-
-
-</div>
-
 
 
 </motion.div>
@@ -381,13 +409,8 @@ mt-2
 }
 
 
-
 </div>
 
-
-
-
-</div>
 
 
 </div>
@@ -395,6 +418,8 @@ mt-2
 
 </section>
 
+
 );
+
 
 }

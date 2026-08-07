@@ -7,37 +7,37 @@ import { motion } from "framer-motion";
 const events = [
 
 {
-image:"/images/event-1.jpg",
+image:"/weddimngimg.png",
 title:"Luxury Wedding Event",
 desc:"Elegant wedding arrangements with premium decoration."
 },
 
 {
-image:"/images/event-2.jpg",
+image:"/corporateimg.png",
 title:"Corporate Conference",
 desc:"Modern conference spaces for professional events."
 },
 
 {
-image:"/images/event-3.jpg",
+image:"/birthdayimg.png",
 title:"Birthday Celebration",
 desc:"Beautiful celebrations with customized themes."
 },
 
 {
-image:"/images/event-4.jpg",
+image:"/grandimg.png",
 title:"Grand Ballroom",
 desc:"Spacious halls designed for memorable occasions."
 },
 
 {
-image:"/images/event-5.jpg",
+image:"/privateimg.png",
 title:"Private Dinner Event",
 desc:"Exclusive dining experience with luxury setup."
 },
 
 {
-image:"/images/event-6.jpg",
+image:"/outimg.png",
 title:"Outdoor Event",
 desc:"Amazing outdoor venues with beautiful views."
 }

@@ -11,37 +11,37 @@ import {
 const restaurants = [
 
 {
-image:"/images/restaurant-1.jpg",
+image:"/dining1img.png",
 title:"Luxury Dining Hall",
 desc:"Elegant dining space with premium interiors."
 },
 
 {
-image:"/images/restaurant-2.jpg",
+image:"/finedinimg.png",
 title:"Fine Dining Experience",
 desc:"Enjoy delicious meals in a luxury atmosphere."
 },
 
 {
-image:"/images/restaurant-3.jpg",
+image:"/chefimg.png",
 title:"Chef Special Dishes",
 desc:"Beautifully presented signature cuisines."
 },
 
 {
-image:"/images/restaurant-4.jpg",
+image:"/imgroman.png",
 title:"Private Dinner",
 desc:"Exclusive private dining for special moments."
 },
 
 {
-image:"/images/restaurant-5.jpg",
+image:"/outdoorimg.png",
 title:"Outdoor Restaurant",
 desc:"Amazing outdoor dining with beautiful views."
 },
 
 {
-image:"/images/restaurant-6.jpg",
+image:"/coffeimg.png",
 title:"Coffee Lounge",
 desc:"Relaxing lounge area with premium beverages."
 }

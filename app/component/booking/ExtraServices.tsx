@@ -8,7 +8,7 @@ const services = [
 
 {
     name:"Luxury Spa Treatment",
-    image:"/images/spa.jpg",
+    image:"/body1img.jpg",
     price:"$120",
     description:
     "Relax and refresh with our premium spa and wellness treatments."
@@ -17,7 +17,7 @@ const services = [
 
 {
     name:"Fine Dining Experience",
-    image:"/images/dining.jpg",
+    image:"/fasttimg.jpg",
     price:"$80",
     description:
     "Enjoy delicious international cuisine prepared by expert chefs."
@@ -26,7 +26,7 @@ const services = [
 
 {
     name:"Airport Pickup",
-    image:"/images/hotel.jpg",
+    image:"/welcomeimg.jpg",
     price:"$50",
     description:
     "Comfortable private transport from airport to hotel."

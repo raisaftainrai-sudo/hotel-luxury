@@ -23,7 +23,7 @@ overflow-hidden
 
 <Image
 
-src="/images/booking-hero.jpg"
+src="/bookimg.png"
 
 alt="Luxury Hotel"
 
@@ -38,17 +38,16 @@ object-cover
 
 
 {/* Overlay */}
-
 <div
-className="
-absolute
-inset-0
-bg-black/60
-bg-gradient-to-r
-from-black
-via-black/70
-to-orange-900/40
-"
+  className="
+  absolute
+  inset-0
+  bg-black/30
+  bg-gradient-to-r
+  from-black/30
+  via-black/20
+  to-orange-900/10
+  "
 />
 
 

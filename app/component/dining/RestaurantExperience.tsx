@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from 'next/link';
 import { motion } from "framer-motion";
 import { Clock3, ChefHat, Star } from "lucide-react";
 
@@ -55,7 +56,7 @@ export default function RestaurantExperience() {
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          {experiences.map((item,index)=>(
+          {experiences.map((item, index) => (
 
 
             <motion.div
@@ -63,13 +64,13 @@ export default function RestaurantExperience() {
               key={index}
 
               whileHover={{
-                y:-10,
-                scale:1.03
+                y: -10,
+                scale: 1.03
               }}
 
               transition={{
-                duration:0.3,
-                ease:"easeOut"
+                duration: 0.3,
+                ease: "easeOut"
               }}
 
               className="
@@ -98,11 +99,11 @@ export default function RestaurantExperience() {
                 <motion.div
 
                   whileHover={{
-                    scale:1.08
+                    scale: 1.08
                   }}
 
                   transition={{
-                    duration:0.5
+                    duration: 0.5
                   }}
 
                   className="relative h-full w-full"
@@ -135,7 +136,7 @@ export default function RestaurantExperience() {
                   gap-2
                 ">
 
-                  <Star size={16}/>
+                  <Star size={16} />
                   Premium
 
                 </div>
@@ -158,7 +159,7 @@ export default function RestaurantExperience() {
 
                 <div className="flex items-center gap-2 mt-4 text-orange-500">
 
-                  <Clock3 size={18}/>
+                  <Clock3 size={18} />
 
                   <span className="text-gray-700 text-sm">
                     {item.time}
@@ -175,47 +176,15 @@ export default function RestaurantExperience() {
 
 
 
-                <motion.button
 
-                  whileHover={{
-                    scale:1.05,
-                    y:-3
-                  }}
-
-                  whileTap={{
-                    scale:0.95
-                  }}
-
-                  transition={{
-                    duration:0.3
-                  }}
-
-                  className="
-                    mt-8
-                    w-full
-                    py-3
-                    rounded-full
-                    bg-black
-                    text-white
-                    hover:bg-orange-500
-                    transition
-                    flex
-                    items-center
-                    justify-center
-                    gap-2
-                  "
-
-                >
-
-                  <ChefHat size={20}/>
-
-                  Reserve Table
-
-                </motion.button>
-
-
+                  <Link href="/booking">
+                    <button className="mt-6 flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-semibold transition">
+                      <ChefHat size={20} />
+                      Reserve Table
+                    </button>
+                  </Link>
+             
               </div>
-
 
             </motion.div>
 

@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+
+import Link from 'next/link';
+
 import { motion } from "framer-motion";
 import { Utensils, ArrowRight } from "lucide-react";
 
@@ -323,52 +326,12 @@ leading-6
 
 </p>
 
-
-
-
-
-
-
-<button className="
-
-mt-6
-
-flex
-
-items-center
-
-gap-2
-
-
-bg-orange-500
-
-
-hover:bg-orange-600
-
-
-px-6
-
-py-3
-
-
-rounded-full
-
-
-font-semibold
-
-
-transition
-
-">
-
-
-Book Table
-
-<ArrowRight size={18}/>
-
-
-</button>
-
+<Link href="/booking">
+  <button className="mt-6 flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full font-semibold transition">
+    Book Table
+    <ArrowRight size={18}/>
+  </button>
+</Link>
 
 
 

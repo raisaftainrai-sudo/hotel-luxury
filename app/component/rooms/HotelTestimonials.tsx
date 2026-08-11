@@ -30,7 +30,7 @@ rating:5
 {
 name:"Daniel Wilson",
 role:"Holiday Guest",
-image:"/guests/guest3.jpg",
+image:"/img9.avif",
 review:
 "Perfect place for relaxation. The dining and hospitality were excellent.",
 rating:5

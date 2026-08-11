@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import BookingCTA from "../home/BookingCTA";
 
 const rooms = [
   {
@@ -116,7 +117,7 @@ export default function RoomSelection() {
                   ))}
                 </div>
 
-                <Link href={room.link}>
+                <Link href="/gallery">
                   <button
                     className="mt-7 w-full py-3 rounded-full bg-black text-white hover:bg-orange-500 transition duration-300"
                   >
